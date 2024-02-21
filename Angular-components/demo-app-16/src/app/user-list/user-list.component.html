@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let user of users; index as i">
+    <span [class]="user.status">
+      person with the name of {{ user.name }} is {{ user.age }} years old
+    </span>
+
+    <!-- <span *ngIf="i % 2 !== 0" style="background-color: red">
+      person with the name of {{ user.name }} is {{ user.age }} years old
+    </span> -->
+  </li>
+</ul>

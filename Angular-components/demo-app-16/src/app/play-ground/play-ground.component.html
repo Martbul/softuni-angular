@@ -1,0 +1,17 @@
+<p>play-ground works!</p>
+
+<div>Toggle Me</div>
+<button (click)="handleClick($event)">Click Me</button>
+
+<p [class.shiny]="isToggle">This text will be shiny on click</p>
+<div *ngIf="isToggle">
+  <div [class]="bgGreen">Toggle Me</div>
+  <img [attr.src]="imgUrl" />
+</div>
+
+<div [style.color]="isToggle ? 'orange' : 'blue'">
+  This is dynamic color change
+</div>
+
+<input type="text" placeholder="username" #username />
+<button (click)="handleInput(username.value)">Handle Input</button>
