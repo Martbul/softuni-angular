@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 /*
 *Removes all default whitespace
 */
@@ -22,8 +21,7 @@ html {
   box-sizing: inherit;
 }
 
-/* 
-typograpthy */
+/* Typography */
 html {
   font: 18px/1.5 Verdana, sans-serif;
 }
@@ -126,35 +124,7 @@ blockquote p.author {
   text-align: right;
 }
 
-/* 
-global styles */
-
-body {
-  max-width: 1366px;
-  margin: auto;
-  position: relative;
-  min-height: 100vh;
-}
-
-h2 {
-  text-align: center;
-  border-bottom: 1px dashed #999;
-}
-
-span {
-  font-weight: bold;
-}
-
-button {
-  background-color: #4ebced;
-  color: white;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-/* layout styling */
+/* Layout Styiling */
 
 body {
   margin: 0;
@@ -194,8 +164,33 @@ table tbody tr:nth-child(even) td {
   background: #ccc;
 }
 
-/* media queries */
+/* Global styles */
+body {
+  max-width: 1366px;
+  margin: auto;
+  position: relative;
+  min-height: 100vh;
+}
 
+h2 {
+  text-align: center;
+  border-bottom: 1px dashed #999;
+}
+
+span {
+  font-weight: bold;
+}
+
+button {
+  background-color: #4ebced;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Media Queries */
 @media (min-width: 800px) {
   html {
     font-size: 14px;

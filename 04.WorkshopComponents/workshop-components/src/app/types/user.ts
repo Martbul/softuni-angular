@@ -1,7 +1,7 @@
 export interface User {
   themes: string[];
   posts: string[];
-  _id: any;
+  _id: string;
   tel: string;
   email: string;
   username: string;

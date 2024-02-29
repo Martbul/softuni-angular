@@ -1,5 +1,8 @@
 <main>
-  <div class="theme-title">
+  <div *ngIf="isLoading">
+    <app-loader />
+  </div>
+  <div *ngIf="!isLoading" class="theme-title">
     <!-- theme component  -->
     <div *ngFor="let theme of themes" class="theme-container">
       <div class="theme-name-wrapper">
@@ -9,36 +12,21 @@
           </a>
           <div class="columns">
             <div>
-              <p>Date: <time>{{theme.created_at}}</time></p>
+              <p>
+                Date: <time>{{ theme.created_at }}</time>
+              </p>
               <div class="nick-name">
-                <p>Username: <span>{{theme.userId.username}}</span></p>
+                <p>
+                  Username: <span>{{ theme.userId.username }}</span>
+                </p>
               </div>
             </div>
             <div class="subscribers">
               <!-- <button class="subscribe">Subscribe</button> -->
-              <p>Subscribers: <span>{{theme.subscribers.length || 0}}</span></p>
+              <p>
+                Subscribers: <span>{{ theme.subscribers?.length || 0 }}</span>
+              </p>
             </div>
-          </div>
-        
-        </div>
-      </div>
-    </div>
-
-    <div class="theme-name-wrapper">
-      <div class="theme-name">
-        <a href="#" class="normal">
-          <h2>Java Advanced</h2>
-        </a>
-        <div class="columns">
-          <div>
-            <p>Date: <time>2020-08-10T11:48:45.411Z</time></p>
-            <div class="nick-name">
-              <p>Username: <span>Jane</span></p>
-            </div>
-          </div>
-          <div class="subscribers">
-            <!-- <button class="subscribe">Subscribe</button> -->
-            <p>Subscribers: <span>22</span></p>
           </div>
         </div>
       </div>

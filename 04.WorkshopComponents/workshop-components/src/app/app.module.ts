@@ -7,17 +7,15 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { MainComponent } from './main/main.component';
 import { ThemesListComponent } from './themes-list/themes-list.component';
-import { PostListsComponent } from './post-lists/post-lists.component'; 
+import { PostsListComponent } from './posts-list/posts-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PostItemComponent } from './post-lists/post-item/post-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     ThemesListComponent,
-    PostListsComponent,
-    PostItemComponent,
+    PostsListComponent,
   ],
   imports: [
     BrowserModule,
