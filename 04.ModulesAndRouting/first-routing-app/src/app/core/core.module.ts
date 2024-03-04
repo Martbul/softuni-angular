@@ -2,17 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GlobalLoaderComponent } from './global-loader/global-loader.component';
 import { SharedModule } from '../shared/shared.module';
+import { NavigationComponent } from './navigation/navigation.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [
-    GlobalLoaderComponent
+    GlobalLoaderComponent,
+    NavigationComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
-  exports: [GlobalLoaderComponent]
+  exports: [GlobalLoaderComponent,
+  NavigationComponent]
 })
 export class CoreModule { }

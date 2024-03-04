@@ -8,7 +8,7 @@ import { IUser } from 'src/app/shared/interfaces';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
+export class UserListComponent implements OnInit {
   userList:IUser[] | null= null
   constructor(
     private userService:UserService,

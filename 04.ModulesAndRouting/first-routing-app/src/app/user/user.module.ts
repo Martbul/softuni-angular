@@ -1,17 +1,33 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListComponent } from './list/list.component';
+import { UserListComponent } from './list/list.component';
+import { UserDetailComponent } from './detail/detail.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [
-    ListComponent
+    UserListComponent,
+    UserDetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([
+     
+
+      {
+        path:'user/list',
+        component:UserListComponent
+      },
+     
+      {
+        path:'user/detail/:id',
+        component:UserDetailComponent
+      },
+  ])
   ],
-  exports: [ListComponent]
+  exports: [UserListComponent]
   
 })
 export class UserModule { }
