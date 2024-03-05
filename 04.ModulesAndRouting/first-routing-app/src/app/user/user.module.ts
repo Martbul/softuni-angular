@@ -1,3 +1,4 @@
+import { AuthGuard } from './user-detail.guard';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserListComponent } from './list/list.component';
@@ -23,6 +24,7 @@ import { RouterModule } from '@angular/router';
      
       {
         path:'user/detail/:id',
+        canActivate:[AuthGuard],
         component:UserDetailComponent
       },
   ])
