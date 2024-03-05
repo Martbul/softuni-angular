@@ -1,4 +1,4 @@
-import { GlobalLoaderService } from './../../core/services/global-loader.service';
+import { GlobalLoaderService } from '../../core/services/global-loader.service';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { IUser } from 'src/app/shared/interfaces';
@@ -6,29 +6,29 @@ import { IUser } from 'src/app/shared/interfaces';
 @Component({
   selector: 'app-user-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
 })
 export class UserListComponent implements OnInit {
-  userList:IUser[] | null= null
+  userList: IUser[] | null = null;
   constructor(
-    private userService:UserService,
-    private globalLoaderService:GlobalLoaderService) 
-    {}
+    private userService: UserService,
+    private globalLoaderService: GlobalLoaderService
+  ) {}
 
-  ngOnInit():void{
-   this.loadUsers();
+  ngOnInit(): void {
+    this.loadUsers();
   }
-  loadUsers():void{
+  loadUsers(): void {
     this.globalLoaderService.showLoader('loading users');
     this.userService.loadUsers().subscribe({
-        next:(userList) =>{
+      next: (userList) => {
         this.globalLoaderService.hideLoader();
-        this.userList = userList
-      }
-    })
+        this.userList = userList;
+      },
+    });
   }
 
-  reloadUsersHandler():void{
+  reloadUsersHandler(): void {
     this.loadUsers();
   }
 }

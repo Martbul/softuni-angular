@@ -7,20 +7,20 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { UserModule } from './user/user.module';
+import { StandaloneCmpComponent } from './standalone-cmp/standalone-cmp.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
+    StandaloneCmpComponent,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
     HttpClientModule,
-    UserModule
+    UserModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
