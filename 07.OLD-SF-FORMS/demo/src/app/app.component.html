@@ -1,0 +1,43 @@
+<!-- 
+
+<div appMyRouterLink="/path/to/something" [template]="myTemplate">hello</div>
+
+
+<div *appMyRouterLink="''" >hello</div>
+
+
+<ng-template #myTemplate>HELLO AGAIN!</ng-template>
+
+<ng-template [ngIf]="true"> 
+  <div>
+    123
+  </div>
+</ng-template>
+
+
+<button (click)="myIfValue = !myIfValue">
+  Toggle my if values
+
+</button>
+
+<div *appMyIf="myIfValue">
+  MyIf if working
+</div>
+
+
+<ng-template [appMyIf]="myIfValue" [template]="myTemplate"><div> MyIf If working</div></ng-template>
+
+<ng-template #tmp>
+  SEPARETE TEMPLATE OF MYIF
+</ng-template>
+
+<ng-container [appMyIf]="myIfValue" [template]="tmp">
+
+</ng-container> -->
+
+
+<nav>
+  <a routerLink="/login">Login</a>
+    <a routerLink="/register">Register</a>
+</nav>
+<router-outlet>
