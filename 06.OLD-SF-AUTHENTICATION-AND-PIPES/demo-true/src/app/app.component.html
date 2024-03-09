@@ -1,0 +1,11 @@
+{{getScores(obj)}}
+<!-- paipa shte se pre calculira samo 
+kogato stojnosta v lqvo na "|" se promeni, 
+ako neshto ot dqsnata strana na "|" se prometi to tova
+ nqma da trigarne pre calculirane na paipa -->
+{{obj.scores | reduce : add: 100}}
+<button (click)="addProp()">TEST</button>
+
+
+{{myPromise | async }}
+{{$time | async|date:'HH:mm:ss'}}
