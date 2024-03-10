@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { interval, map } from 'rxjs';
+import { UserService } from './user.service';
 
 
 function add(a:number |string,b:number |string): number|string {
@@ -11,13 +12,13 @@ function add(a:number |string,b:number |string): number|string {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'demo-true';
   obj={
     scores:[1,2,3,4,5,6,7,8,9]
     
   }
-
+constructor(private userService:UserService){}
   add = add;
 
   private scores:number[] = []
@@ -47,5 +48,15 @@ export class AppComponent {
 
   addProp(){
     (this.obj as any)['test' ]=500
+  }
+
+
+  ngOnInit(): void {
+    this.userService.getUsers().subscribe({
+      next:(users)=> console.log(users),
+      error:(err) => console.log(err)
+      
+      
+    })
   }
 }
